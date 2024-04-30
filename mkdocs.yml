@@ -1,0 +1,95 @@
+#[Info]
+site_name: Tianyi's Blog
+site_url: https://tianyi-zju.github.io/
+site_author: Tianyi
+repo_url: https://github.com/tianyi-ZJU/tianyi-ZJU.github.io
+repo_name: Tianyi's Blog
+nav: 
+    - 主页:
+      - index.md
+    - 课外笔记:
+      - OOP: 课外/面向对象程序设计.md
+      - MIT: 课外/MIT人工智能.md
+    - 课内笔记:
+      - 形势与政策: 课内/形策.md
+      - 普通化学实验: 课内/普化实验.md
+theme:
+  name: material
+  language: zh
+
+  palette:
+    #primary: blue grey
+
+    - media: "(prefers-color-scheme: light)"
+      scheme: default # 日间模式
+      primary: indig  # 上方的
+      accent: deep purple # 链接等可交互元件的高亮色
+      # teal 
+      toggle:
+        icon: material/brightness-7  # 图标
+        name: 切换至夜间模式 # 鼠标悬浮提示
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate # 夜间模式
+      primary: black 
+      accent: deep purple
+      # teal
+      toggle:
+        icon: material/brightness-4
+        name: 切换至日间模式
+  features:
+    - content.code.annotate
+    - navigation.tracking
+    - navigation.top
+    - navigation.tabs
+    - navigation.footer
+    - navigation.indexes
+    - navigation.sections
+    - navigation.path
+  icon:
+    repo: fontawesome/brands/git-alt
+
+plugins:
+  - git-revision-date-localized:
+      enable_creation_date: true
+  - git-committers:
+      repository: squidfunk/mkdocs-material
+      branch: main
+      enabled: !ENV [CI, false]
+markdown_extensions:
+  - toc:
+      permalink: true
+      toc_depth: 4
+  - admonition
+  - meta
+  - tables
+  - def_list
+  - attr_list
+  - md_in_html
+  - sane_lists
+  - admonition
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.snippets
+  - pymdownx.magiclink
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.arithmatex:
+      generic: true
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - javascripts/tex-mml-chtml.js
