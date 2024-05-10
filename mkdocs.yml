@@ -10,6 +10,7 @@ nav:
     - 课外笔记:
       - OOP: 课外/面向对象程序设计.md
       - MIT: 课外/MIT人工智能.md
+      - Transformer: 课外/3b1b_Transformer.md
     - 课内笔记:
       - 形势与政策: 课内/形策.md
       - 普通化学实验: 课内/普化实验.md
